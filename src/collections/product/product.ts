@@ -6,7 +6,8 @@ const Products: CollectionConfig = {
  
   access: {
     read: () => true,
-    delete:() => true,
+    delete: () => true,
+    create: () => true,
   },
   fields: [
     {
