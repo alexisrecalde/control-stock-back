@@ -8,7 +8,9 @@ const Products: CollectionConfig = {
     read: () => true,
     delete: () => true,
     create: () => true,
+    update: () => true,
   },
+  
   fields: [
     {
 			name: 'name',
@@ -23,10 +25,22 @@ const Products: CollectionConfig = {
       label: "Descripcion"
     },
     {
+			name: 'supplier',
+      type: 'textarea', 
+      required: true,
+      label: "Proveedor"
+    },
+    {
 			name: 'price',
       type: 'number', 
       required: true,
-      label: "Precio"
+      label: "Precio Costo"
+    },
+    {
+			name: 'salePrice',
+      type: 'number', 
+      required: true,
+      label: "Precio Venta"
     },
     {
 			name: 'quantity',
