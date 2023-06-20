@@ -27,7 +27,7 @@ const Products: CollectionConfig = {
     {
 			name: 'supplier',
       type: 'textarea', 
-      required: true,
+      required: false,
       label: "Proveedor"
     },
     {
