@@ -2,8 +2,6 @@ import { CollectionConfig } from 'payload/types';
 
 const Products: CollectionConfig = {
   slug: 'products',
-
- 
   access: {
     read: () => true,
     delete: () => true,
@@ -15,7 +13,8 @@ const Products: CollectionConfig = {
       type: 'text', 
       required: true,
       label: "Nombre"
-		},
+    },
+   
 		{
 			name: 'description',
       type: 'textarea', 

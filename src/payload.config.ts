@@ -6,6 +6,7 @@ import Products from './collections/product/product';
 import redirects from '@payloadcms/plugin-redirects';
 import Nav from './globals/Nav';
 import Pages from './collections/pages/Pages';
+import Ventas from "./collections/ventas/ventas"
 
 export default buildConfig({
   serverURL: 'http://localhost:8080',
@@ -16,7 +17,8 @@ export default buildConfig({
   collections: [
     Users,
     Products,
-    Pages
+    Pages, 
+    Ventas
     // Add Collections here
     // Examples,
   ],
