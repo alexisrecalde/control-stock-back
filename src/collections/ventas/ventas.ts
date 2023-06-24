@@ -32,6 +32,13 @@ const Ventas: CollectionConfig = {
       label: "Nombre",
      
     },
+
+    {
+			name: 'supplier',
+      type: 'textarea', 
+      required: true,
+      label: "Proveedor"
+    },
    
 		{
 			name: 'description',
@@ -39,6 +46,7 @@ const Ventas: CollectionConfig = {
       required: true,
       label: "Descripcion"
     },
+
     {
 			name: 'price',
       type: 'number', 
