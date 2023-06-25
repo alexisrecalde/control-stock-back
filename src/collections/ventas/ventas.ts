@@ -1,43 +1,20 @@
 import { CollectionConfig } from "payload/types";
 
 const Ventas: CollectionConfig = {
-  slug: "ventas",
-  
-
+  slug: 'ventas',
   access: {
     read: () => true,
     delete: () => true,
     create: () => true,
+    update: () => true,
   },
+  
   fields: [
-  
-    {
-    
-  
-      name: "orden", // required
-      type: "array", // required
-      label: "orden de venta",
-      minRows: 1,
-      //interfaceName: "CardSlider", // optional
-      labels: {
-        singular: "orden",
-        plural: "ordenes",
-        
-      },
-      fields: [
     {
 			name: 'name',
       type: 'text', 
       required: true,
-      label: "Nombre",
-     
-    },
-
-    {
-			name: 'supplier',
-      type: 'textarea', 
-      required: true,
-      label: "Proveedor"
+      label: "Nombre"
     },
    
 		{
@@ -46,12 +23,23 @@ const Ventas: CollectionConfig = {
       required: true,
       label: "Descripcion"
     },
-
+    {
+			name: 'supplier',
+      type: 'textarea', 
+      required: false,
+      label: "Proveedor"
+    },
     {
 			name: 'price',
       type: 'number', 
       required: true,
-      label: "Precio"
+      label: "Precio Costo"
+    },
+    {
+			name: 'salePrice',
+      type: 'number', 
+      required: true,
+      label: "Precio Venta"
     },
     {
 			name: 'quantity',
@@ -59,17 +47,6 @@ const Ventas: CollectionConfig = {
       required: true,
       label: "Cantidad"
 		},
-      ],
-      admin: {
-        components: {
-          RowLabel: ({ data, index }) => {
-            console.log(data);
-            
-            return data?.title || `Orden ${String(index).padStart(2, "0")}`;
-          },
-        },
-      },
-    },
   ],
 };
 export default Ventas;
