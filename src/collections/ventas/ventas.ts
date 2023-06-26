@@ -11,6 +11,13 @@ const Ventas: CollectionConfig = {
   
   fields: [
     {
+			name: 'date',
+      type: 'text', 
+      required: true,
+      label: "Fecha"
+    },
+
+    {
 			name: 'name',
       type: 'text', 
       required: true,
